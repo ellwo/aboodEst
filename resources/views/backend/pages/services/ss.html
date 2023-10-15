@@ -1,0 +1,481 @@
+<div x-data="{  'stepsCoun': 0 , 'addstepsCoun':0}" class="mb-4 form-control"> <i x-text="g_sub_step_count"></i> <strong>عنوان الخطوة :- </strong> <br>
+    <input type="text" value="" class="form-control" :name="'titles'+sub_stepId+'[]'"> <br>
+    <template x-for="i in addstepsCoun">
+        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                    x-text="stepsCoun+i"></i>-</span> <input :name="'steps'+sub_stepId+'_'+g_sub_step_count+'[]'" class="form-control" value=""> </div>
+    </template>
+    <div class="mx-auto mt-2 "><button type="button" @click="addstepsCoun++" class="mx-auto text-white btn btn-sm bg-success ">اضافة حطوة <i></i></button></div>
+    <div class="col-4">
+        <label for="exampleFormControlInput1">نوع الترتيب</label>
+
+        <div class="mb-3 ">
+            <label class="w-full h-4 form-control" for="customRadio0">ارقام
+                <input class="form-check-input" type="radio" value="counter" checked="" :name="'types'+sub_stepId+'_'+g_sub_step_count+'[]'"
+                    id="customRadio0">
+            </label>
+        </div>
+        <div class="">
+            <label class="w-full h-4 form-control " for="customRadio20">نقاط
+                <input class="form-check-input" type="radio" value="point" :name="'types'+sub_stepId+'_'+g_sub_step_count+'[]'" id="customRadio20">
+            </label>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="accordion-1">
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto col-md-10">
+                <div class="accordion" id="accordionRental">
+                    <div class="mb-3 accordion-item">
+                        <h5 class="accordion-header" id="headingOne1">
+                            <button class="accordion-button border-bottom font-weight-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+
+                                <h3 for="">فيزة عمل</h3>
+                                <i class="pt-1 text-xs collapse-close fa fa-plus position-absolute start-0 me-3"
+                                    aria-hidden="true"></i>
+                                <i class="pt-1 text-xs collapse-open fa fa-minus position-absolute start-0 me-3"
+                                    aria-hidden="true"></i>
+                            </button>
+                            <input type="hidden" name="servicePartid[]" value="1">
+                        </h5>
+                        <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne1" data-bs-parent="#accordionRental" style="">
+                            <div class="text-sm accordion-body ">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">
+                                        <h5> اسم الخدمة الفرعية</h5>
+                                    </label>
+                                    <input type="text" required="" name="steptitel[]" class="text-lg form-control-lg" id="exampleFormControlInput1" value="فيزة عمل" placeholder="ادخل اسم الخدمة">
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <h5> وصف الخدمة الفرعية</h5>
+                                    </label>
+                                    <textarea type="text" required="" name="stepnote[]" class="text-lg form-control form-control-lg" placeholder="ادخل اسم الخدمة">نستطيع تقديم خدمة الحصول على تأشيرة عمل في المملكة العربية السعودية
+وفي ما يلي الخطوات والمتطلبات والتعليمات للحصول على تأشيرة العمل</textarea>
+                                </div>
+                                <div class="mb-4 ">
+                                    <h4>الخطوات / التعليمات</h4>
+
+
+                                    <div x-data="{  'stepsCoun': 6 , 'addstepsCoun':0}" class="mb-4 form-control">
+                                        1-<strong>عنوان الخطوة :- </strong> <br> <input type="text" value="متطلبات الحصول على تأشيرة عمل في المملكة العربية السعودية فيزة عمل" class="form-control" name="titles1[]" onfocus="focused(this)" onfocusout="defocused(this)">                                        <br>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_0[]" class="form-control" value="جواز السفر ساري المفعول فيزة عمل" onfocus="focused(this)" onfocusout="defocused(this)"> </div>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_0[]" class="form-control" value="صورتين خلفية بيضاء 4×6" onfocus="focused(this)" onfocusout="defocused(this)"> </div>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_0[]" class="form-control" value="الفحص الطبي من احدى المستشفيات المعتمدة" onfocus="focused(this)" onfocusout="defocused(this)"> </div>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_0[]" class="form-control" value="صورة التأشيرة" onfocus="focused(this)" onfocusout="defocused(this)"> </div>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_0[]" class="form-control" value="صورة هوية الكفيل للأفراد أو السجل التجاري للشركات" onfocus="focused(this)" onfocusout="defocused(this)"> </div>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_0[]" class="form-control" value="عمل تفويض إلكتروني بإسم أجياد ترخيص رقم 17 فيزة عمل" onfocus="focused(this)" onfocusout="defocused(this)">                                            </div> <template x-for="i in addstepsCoun">
+                                            <div class="input-group"> <span
+                                                    class="text-white input-group-text bg-secondary"><i
+                                                        class="fa-solid fa-circle"></i></span> <input name="steps1_0[]"
+                                                    class="form-control" value=""> </div>
+                                        </template>
+                                        <div class="mx-auto mt-2 "><button type="button" @click="addstepsCoun++" class="mx-auto text-white btn btn-sm bg-success ">اضافة حطوة
+                                                <i></i></button></div>
+                                        <div class="col-4">
+                                            <label for="exampleFormControlInput1">نوع الترتيب</label>
+
+                                            <div class="mb-3 ">
+                                                <label class="w-full h-4 form-control" for="customRadio01">ارقام
+                                                    <input class="form-check-input" type="radio" value="counter"
+                                                        name="types1_0[]" id="customRadio01">
+                                                </label>
+                                            </div>
+                                            <div class="">
+                                                <label class="w-full h-4 form-control " for="customRadio201">نقاط
+                                                    <input class="form-check-input" type="radio" value="point"
+                                                        checked="" name="types1_0[]" id="customRadio201">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div x-data="{  'stepsCoun': 5 , 'addstepsCoun':0}" class="mb-4 form-control">
+                                        2-<strong>عنوان الخطوة :- </strong> <br> <input type="text" value="تعليمات اضافية فيزة عملل" class="form-control" name="titles1[]" onfocus="focused(this)" onfocusout="defocused(this)"> <br>
+                                        <div class="input-group">
+                                            <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_1[]" class="form-control" value="يجب الا تقل صلاحية الجواز عن ستة أشهر." onfocus="focused(this)"
+                                                onfocusout="defocused(this)">
+                                        </div>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_1[]" class="form-control" value="مطابقة المهنة في الجواز للمهنه في فيزة العمل." onfocus="focused(this)" onfocusout="defocused(this)"> </div>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_1[]" class="form-control" value="إرفاق اصل شهادة المؤهل العلمي معمدة من الجهات الحكومية لفيز العمل المتخصصة" onfocus="focused(this)" onfocusout="defocused(this)">                                            </div>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_1[]" class="form-control" value="لا يقل عمر المتقدم لنيل فيزة العمل عن 21 سنة ولا يزيد عن 40 سنة.فيزة عمل" onfocus="focused(this)" onfocusout="defocused(this)">                                            </div>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                                    class="fa-solid fa-circle"></i></span> <input name="steps1_1[]" class="form-control" value="المستشفيات المعتمدة لعمل الفحص الطبي هي -مستشفى آزال صنعاء - عدن -مستشفى صابر عدن" onfocus="focused(this)"
+                                                onfocusout="defocused(this)"> </div> <template x-for="i in addstepsCoun">
+                                            <div class="input-group"> <span
+                                                    class="text-white input-group-text bg-secondary"><i
+                                                        class="fa-solid fa-circle"></i></span> <input name="steps1_1[]"
+                                                    class="form-control" value=""> </div>
+                                        </template>
+                                        <div class="mx-auto mt-2 "><button type="button" @click="addstepsCoun++" class="mx-auto text-white btn btn-sm bg-success ">اضافة حطوة
+                                                <i></i></button></div>
+                                        <div class="col-4">
+                                            <label for="exampleFormControlInput1">نوع الترتيب</label>
+
+                                            <div class="mb-3 ">
+                                                <label class="w-full h-4 form-control" for="customRadio11">ارقام
+                                                    <input class="form-check-input" type="radio" value="counter"
+                                                        name="types1_1[]" id="customRadio11">
+                                                </label>
+                                            </div>
+                                            <div class="">
+                                                <label class="w-full h-4 form-control " for="customRadio211">نقاط
+                                                    <input class="form-check-input" type="radio" value="point"
+                                                        checked="" name="types1_1[]" id="customRadio211">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div x-data="{  'stepsCoun': 1 , 'addstepsCoun':0}" class="mb-4 form-control">
+                                        3-<strong>عنوان الخطوة :- </strong> <br> <input type="text" value="خطوة 3 لفيزة العمل" class="form-control" name="titles1[]" onfocus="focused(this)" onfocusout="defocused(this)"> <br>
+                                        <div class="input-group"> <span class="text-white input-group-text bg-secondary">1-</span> <input name="steps1_2[]" class="form-control" value="الخطوة الاولى في سبيل الفيزة" onfocus="focused(this)" onfocusout="defocused(this)"> </div>
+                                        <template x-for="i in addstepsCoun">
+                                            <div class="input-group"> <span
+                                                    class="text-white input-group-text bg-secondary"><i
+                                                        x-text="stepsCoun+i"></i>-</span> <input name="steps1_2[]"
+                                                    class="form-control" value=""> </div>
+                                        </template>
+                                        <div class="mx-auto mt-2 "><button type="button" @click="addstepsCoun++" class="mx-auto text-white btn btn-sm bg-success ">اضافة حطوة
+                                                <i></i></button></div>
+                                        <div class="col-4">
+                                            <label for="exampleFormControlInput1">نوع الترتيب</label>
+
+                                            <div class="mb-3 ">
+                                                <label class="w-full h-4 form-control" for="customRadio21">ارقام
+                                                    <input class="form-check-input" type="radio" value="counter"
+                                                        checked="" name="types1_2[]" id="customRadio21">
+                                                </label>
+                                            </div>
+                                            <div class="">
+                                                <label class="w-full h-4 form-control " for="customRadio221">نقاط
+                                                    <input class="form-check-input" type="radio" value="point"
+                                                        name="types1_2[]" id="customRadio221">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div x-data="{&quot;sub_stepId&quot;:1 , &quot;g_sub_step_count&quot;:2, newStep:0 }">
+
+
+
+                                        <template x-for="i in newStep">
+
+                                            <div x-data="{  'stepsCoun': 0 , 'addstepsCoun':0}"
+                                                class="mb-4 form-control"> <i x-text="g_sub_step_count"></i>
+                                                <strong>عنوان الخطوة :- </strong> <br>
+                                                <input type="text" required="" value="" class="form-control"
+                                                    x-bind:name="'titles'+sub_stepId+'[]'"> <br>
+                                                <template x-for="i in addstepsCoun">
+                                                    <div class="input-group"> <span
+                                                            class="text-white input-group-text bg-secondary"><i
+                                                                x-text="stepsCoun+i"></i>-</span> <input
+                                                            x-bind:name="'steps'+sub_stepId+'_'+g_sub_step_count+'[]'"
+                                                            class="form-control" value=""> </div>
+                                                </template>
+                                        <div class="mx-auto mt-2 "><button type="button" @click="addstepsCoun++" class="mx-auto text-white btn btn-sm bg-success ">اضافة حطوة
+                                                        <i></i></button></div>
+                                        <div class="col-4">
+                                            <label for="exampleFormControlInput1">نوع الترتيب</label>
+
+                                            <div class="mb-3 ">
+                                                <label class="w-full h-4 form-control" x-bind:for="'customRadio0'+g_sub_step_count+sub_stepId">ارقام
+                                                            <input class="form-check-input" type="radio" value="counter"
+                                                                checked=""
+                                                                x-bind:name="'types'+sub_stepId+'_'+g_sub_step_count+'[]'"
+                                                                x-bind:id="'customRadio0'+g_sub_step_count+sub_stepId">
+                                                        </label>
+                                            </div>
+                                            <div class="">
+                                                <label class="w-full h-4 form-control " x-bind:for="'customRadio2'+g_sub_step_count+sub_stepId">نقاط
+                                                            <input class="form-check-input" type="radio" value="point"
+                                                                x-bind:name="'types'+sub_stepId+'_'+g_sub_step_count+'[]'"
+                                                                x-bind:id="'customRadio2'+g_sub_step_count+sub_stepId">
+                                                        </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    </template>
+
+
+
+
+
+                                    <button type="button" @click="newStep++; g_sub_step_count++;">Add Step
+                                            wire:1</button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+
+<div class="form-group" x-data="{'newSubstepsCounter':0,newSubStepID : {{ count($service->service_parts)>0 ?  $service->service_parts()->orderBy('id','desc')->first()->id: 1  }} }">
+    <label for="exampleFormControlTextarea1">الخدمات الفرعية</label> @foreach ($service->service_parts as $serPart)
+    <div class="accordion-1">
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto col-md-10">
+                    <div class="accordion" id="accordionRental">
+                        <div class="mb-3 accordion-item">
+                            <h5 class="accordion-header" id="headingOne{{ $serPart->id }}">
+                                <button class="accordion-button border-bottom font-weight-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $serPart->id }}" aria-expanded="false" aria-controls="collapseOne{{ $serPart->id }}">
+
+    <h3 for="">{{ $serPart->titel }}</h3>
+              <i class="pt-1 text-xs collapse-close fa fa-plus position-absolute start-0 me-3" aria-hidden="true"></i>
+              <i class="pt-1 text-xs collapse-open fa fa-minus position-absolute start-0 me-3" aria-hidden="true"></i>
+            </button>
+                                <input type="hidden" name="servicePartid[]" value="{{ $serPart->id }}">
+                            </h5>
+                            <div id="collapseOne{{ $serPart->id }}" class="accordion-collapse collapse" aria-labelledby="headingOne{{ $serPart->id }}" data-bs-parent="#accordionRental" style="">
+                                <div class="text-sm accordion-body ">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1"><h5> اسم الخدمة الفرعية</h5></label>
+                                        <input type="text" required name="steptitel[]" class="text-lg form-control-lg" id="exampleFormControlInput1" value="{{ $serPart->titel }}" placeholder="ادخل اسم الخدمة">
+                                    </div>
+                                    <div class="form-group">
+                                        <label><h5> وصف الخدمة الفرعية</h5></label>
+                                        <textarea type="text" required name="stepnote[]" class="text-lg form-control form-control-lg" placeholder="ادخل اسم الخدمة">{{ $serPart->note }}</textarea>
+                                    </div>
+                                    <div class="mb-4 ">
+                                        <h4>الخطوات / التعليمات</h4>
+
+
+                                        @php $countstep=0; $count=1; foreach($serPart->steps??[] as $st){ $daa= '"{ \'stepsCoun\': '.count($st['steps']).' , \'addstepsCoun\':0}"'; echo "
+                                        <div x-data=".$daa." class='mb-4 form-control'>"; echo ($count++)."-"; echo "<strong>عنوان الخطوة  :-  </strong> <br/>"." <input type='text' value='".$st[' title ']."' class='form-control' name='titles".$serPart->id."[]' /> "."<br/>"; $i=1; foreach($st['steps']
+                                            as $p=>$k){ if(gettype($k) === "string"){ echo "
+                                            <div class='input-group'> <span class='text-white input-group-text bg-secondary'>".($st['type']=="counter"?($i++)."-":"<i class='fa-solid fa-circle'></i>")."</span> <input name='steps".$serPart->id."_".$countstep."[]' class='form-control'
+                                                    value='".$k."' /> </div> ";} else if(gettype($k)=="array") { echo ($st['type']=="counter"?$i++:"<i class='fa-solid fa-circle'></i>")." ".$p."<br/>"; foreach($k as $v){ echo "\t -$v<br/> "; } } } echo "
+                                            <template
+                                                x-for='i in addstepsCoun'>
+                                                <div class='input-group'> <span class='text-white input-group-text bg-secondary'>".($st['type']=="counter"?"<i x-text='stepsCoun+i'></i>"."-":"<i class='fa-solid fa-circle'></i>")."</span> <input name='steps".$serPart->id."_".$countstep."[]'
+                                                        class='form-control' value='' /> </div>
+                                                </template>"; echo '
+                                                <div class="mx-auto mt-2 "><button type="button" @click="addstepsCoun++" class="mx-auto text-white btn btn-sm bg-success ">اضافة حطوة <i ></i></button></div>'; echo'
+
+
+                                                <div class="col-4">
+                                                    <label for="exampleFormControlInput1">نوع الترتيب</label>
+
+                                                    <div class="mb-3 ">
+                                                        <label class="w-full h-4 form-control" for="customRadio'.$countstep.$serPart->id.'">ارقام
+<input class="form-check-input" type="radio"  value="counter" '.($st["type"]=="counter"?"checked":"").'  name="types'.$serPart->id."_".$countstep.'[]" id="customRadio'.$countstep.$serPart->id.'">
+</label>
+                                                    </div>
+                                                    <div class="">
+                                                        <label class="w-full h-4 form-control " for="customRadio2'.$countstep.$serPart->id.'">نقاط
+<input class="form-check-input" type="radio" value="point" '.($st["type"]=="point"?"checked":"").' name="types'.$serPart->id."_".$countstep.'[]" id="customRadio2'.$countstep.$serPart->id.'">
+</label>
+                                                    </div>
+                                                </div>'; echo '</div>'; $countstep++; } @endphp
+
+                                        <div x-data='{"sub_stepId":{{ $serPart->id }} , "g_sub_step_count":{{ count($serPart->steps??[])-1 }}, newStep:0 }'>
+
+
+
+                                            <template x-for='inew in newStep'>
+
+            <div x-data="{  'stepsCoun': 0 , 'addstepsCoun':0}" class="mb-4 form-control"> <i x-text="(g_sub_step_count+inew+1)"></i>
+                 <strong>عنوان الخطوة :- </strong> <br>
+                <input type="text" required value="" class="form-control" x-bind:name="'titles'+sub_stepId+'[]'"> <br>
+                <template x-for="i in addstepsCoun">
+                    <div class="input-group"> <span class="text-white input-group-text bg-secondary"><i
+                                x-text="stepsCoun+i"></i>-</span> <input x-bind:name="'steps'+sub_stepId+'_'+(g_sub_step_count+inew)+'[]'" class="form-control" value=""> </div>
+                </template>
+                                            <div class="mx-auto mt-2 "><button type="button" @click="addstepsCoun++" class="mx-auto text-white btn btn-sm bg-success ">اضافة حطوة <i></i></button></div>
+                                            <div class="col-4">
+                                                <label for="exampleFormControlInput1">نوع الترتيب</label>
+
+                                                <div class="mb-3 ">
+                                                    <label class="w-full h-4 form-control" x-bind:for="'customRadio0'+(g_sub_step_count+inew)+sub_stepId">ارقام
+                            <input class="form-check-input" type="radio" value="counter" checked="" x-bind:name="'types'+sub_stepId+'_'+(g_sub_step_count+inew)+'[]'"
+                                x-bind:id="'customRadio0'+(g_sub_step_count+inew)+sub_stepId">
+                        </label>
+                                                </div>
+                                                <div class="">
+                                                    <label class="w-full h-4 form-control " x-bind:for="'customRadio2'+(g_sub_step_count+inew)+sub_stepId">نقاط
+                            <input class="form-check-input" type="radio" value="point" x-bind:name="'types'+sub_stepId+'_'+(g_sub_step_count+inew)+'[]'"
+                            x-bind:id="'customRadio2'+(g_sub_step_count+inew)+sub_stepId">
+                        </label>
+                                                </div>
+                                            </div>
+                                            <button onclick="$(this).parent().html('');" type="button" class="btn btn-danger">X</button>
+                                        </div>
+
+
+
+                                        </template>
+
+
+
+
+
+                                        <button type="button" @click="newStep++; ">Add Step wire:{{ $serPart->id }}</button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onClick="$(this).parent().remove(); " type="button" class="btn btn-danger">X</button>
+
+</div>
+
+
+
+@endforeach
+
+
+<template x-for="si in newSubstepsCounter">
+
+
+<div class="accordion-1">
+<div class="container">
+<div class="row">
+<div class="mx-auto col-md-10">
+<div class="accordion" id="accordionRental">
+    <div class="mb-3 accordion-item">
+        <h5 class="accordion-header" x-bind:id="'headingOne'+(newSubStepID+si)">
+            <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse"
+             x-bind:data-bs-target="'#collapseOne'+(newSubStepID+si)"
+              aria-expanded="true" x-bind:aria-controls="'collapseOne'+(newSubStepID+si)">
+
+       <h3 for=""> </h3>
+  <i class="pt-1 text-xs collapse-close fa fa-plus position-absolute start-0 me-3" aria-hidden="true"></i>
+  <i class="pt-1 text-xs collapse-open fa fa-minus position-absolute start-0 me-3" aria-hidden="true"></i>
+</button>
+            <input type="hidden" name="servicePartid[]" x-bind:value="(newSubStepID+si)">
+        </h5>
+        <div x-bind:id="'collapseOne'+(newSubStepID+si)" class="accordion-collapse collapse " aria-labelledby="'headingOne'+(newSubStepID+si)" data-bs-parent="#accordionRental" style="">
+            <div class="text-sm accordion-body ">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1"><h5> اسم الخدمة الفرعية</h5></label>
+                    <input type="text" required="" name="steptitel[]" class="text-lg form-control-lg" id="exampleFormControlInput1" value="" placeholder="ادخل اسم الخدمة">
+                </div>
+                <div class="form-group">
+                    <label><h5> وصف الخدمة الفرعية</h5></label>
+                    <textarea type="text" required="" name="stepnote[]" class="text-lg form-control form-control-lg" placeholder="ادخل اسم الخدمة"></textarea>
+                </div>
+                <div class="mb-4 ">
+                    <h4>الخطوات / التعليمات</h4>
+
+
+
+        <div x-data='{"sub_stepId":(newSubStepID+si) , "g_sub_step_count":0, newStep:0 }'>
+
+
+
+            <template x-for='inew in newStep'>
+
+                <div x-data="{  'stepsCoun': 0 , 'addstepsCoun':0}" class="mb-4 form-control">
+                    <i x-text="(g_sub_step_count+inew)"></i> <strong>عنوان الخطوة :- </strong> <br>
+                    <input type="text" required value="" class="form-control" x-bind:name="'titles'+sub_stepId+'[]'"> <br>
+                    <template x-for="i in addstepsCoun">
+                        <div class="input-group"> <span class="text-white input-group-text bg-secondary">
+                            <i
+                                    x-text="i"></i>-</span> <input x-bind:name="'steps'+sub_stepId+'_'+(i-1)+'[]'" class="form-control" value=""> </div>
+                    </template>
+<div class="mx-auto mt-2 "><button type="button" @click="addstepsCoun++" class="mx-auto text-white btn btn-sm bg-success ">اضافة حطوة <i></i></button></div>
+<div class="col-4">
+    <label for="exampleFormControlInput1">نوع الترتيب</label>
+
+    <div class="mb-3 ">
+        <label class="w-full h-4 form-control" x-bind:for="'customRadio0'+(g_sub_step_count+inew)+sub_stepId">ارقام
+                                <input class="form-check-input" type="radio" value="counter" checked="" x-bind:name="'types'+sub_stepId+'_'+(g_sub_step_count+inew)+'[]'"
+                                    x-bind:id="'customRadio0'+(g_sub_step_count+inew)+sub_stepId">
+                            </label>
+    </div>
+    <div class="">
+        <label class="w-full h-4 form-control " x-bind:for="'customRadio2'+(g_sub_step_count+inew)+sub_stepId">نقاط
+                                <input class="form-check-input" type="radio" value="point" x-bind:name="'types'+sub_stepId+'_'+(g_sub_step_count+inew)+'[]'"
+                                x-bind:id="'customRadio2'+(g_sub_step_count+inew)+sub_stepId">
+                            </label>
+    </div>
+</div>
+</div>
+
+
+
+</template>
+
+
+
+
+
+<button type="button" @click="newStep++; ">اضافة سلسة تعليمات </button>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<button onclick="$(this).parent().remove(); " type="button" class="btn btn-danger">X</button>
+</div>
+
+</template>
+
+<div class="d-flex">
+
+
+    <a href="{{ route('service-parts.create',['service_id'=>$service->id]) }}" class="mx-auto text-white btn btn-sm bg-success ">اضافة خدمة فرعية جديدة  <i class="mx-2 fa fa-save"></i></a>
+
+    <button type="button" @click="newSubstepsCounter++" class="mx-auto text-white btn btn-sm bg-success ">اضافة خدمة فرعية جديدة  <i class="mx-2 fa fa-save"></i></button>
+</div>
+</div>
+
+
+
+
+
+///////////////////////////////////////////////////////////////////
